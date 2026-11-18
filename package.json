@@ -10,7 +10,7 @@
   "scripts": {
     "build": "node tools/cdata.js",
     "test": "node --test",
-    "dev": "nodemon -e js,html,htm,css,png,jpg,gif,ico,js -w tools/ -w wled00/data/ -x node tools/cdata.js"
+    "dev": "node --watch-path=tools --watch-path=wled00/data tools/cdata.js"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,7 @@
   "dependencies": {
     "clean-css": "^5.3.3",
     "html-minifier-terser": "^7.2.0",
-    "web-resource-inliner": "^7.0.0",
-    "nodemon": "^3.1.14"
+    "web-resource-inliner": "^7.0.0"
   },
   "engines": {
     "node": ">=20.0.0"
